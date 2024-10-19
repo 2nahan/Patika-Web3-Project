@@ -1,26 +1,26 @@
-actor calculator {
+actor Calculator {
 
   var cell : Int = 0;
 
-  // Add
+  // Add.
   public func add(n : Int) : async Int {
     cell += n;
     return cell;
   };
 
-  // Subtract
+  // Subtract.
   public func sub(n : Int) : async Int {
     cell -= n;
     return cell;
   };
 
-  // Multiply
+  // Multiply.
   public func mul(n : Int) : async Int {
     cell *= n;
     return cell;
   };
 
-  // Divide
+  // Divide.
   public func div(n : Int) : async ?Int {
     if (n == 0) {
       // 'null' encodes the division by zero error.
