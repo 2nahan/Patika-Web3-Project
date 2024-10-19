@@ -1,4 +1,4 @@
-actor Valculator {
+actor calculator {
 
   var cell : Int = 0;
 
