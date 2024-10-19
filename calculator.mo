@@ -22,9 +22,8 @@ actor Calculator {
 
   // Divide
   public func div(n : Int) : async ?Int {
-    if (n == 0) {
-      // 'null' encodes the division by zero error.
-      return null;
+    if (n == 0) {    
+      return null; // 'null' encodes the division by zero error.
     } else {
       cell /= n;
       return ?cell;
