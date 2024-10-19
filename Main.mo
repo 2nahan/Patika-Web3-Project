@@ -1,37 +1,37 @@
-actor Calculator {
+actor calculator {
 
   var cell : Int = 0;
 
-  // Add.
+  // Add
   public func add(n : Int) : async Int {
     cell += n;
     return cell;
   };
 
-  // Subtract.
+  // Subtract
   public func sub(n : Int) : async Int {
     cell -= n;
     return cell;
   };
 
-  // Multiply.
+  // Multiply
   public func mul(n : Int) : async Int {
     cell *= n;
     return cell;
   };
 
-  // Divide.
+  // Divide
   public func div(n : Int) : async ?Int {
-    if (n == 0) {
-      // 'null' encodes the division by zero error.
-      return null;
-    } else {
+    if(n == 0){  
+      return null; // 'null' encodes the division by zero error.
+    } 
+    else{
       cell /= n;
       return ?cell;
     };
   };
 
-  // Clear the calculator and reset its cell to zero.
+  // Clear the calculator
   public func clearall() : async () {
     cell := 0;
   };
