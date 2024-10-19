@@ -8,19 +8,19 @@ actor calculator {
     return cell;
   };
 
-  // Subtract.
+  // Subtract
   public func sub(n : Int) : async Int {
     cell -= n;
     return cell;
   };
 
-  // Multiply.
+  // Multiply
   public func mul(n : Int) : async Int {
     cell *= n;
     return cell;
   };
 
-  // Divide.
+  // Divide
   public func div(n : Int) : async ?Int {
     if (n == 0) {
       return null; // 'null' encodes the division by zero error.
