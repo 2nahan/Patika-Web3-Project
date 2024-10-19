@@ -22,16 +22,16 @@ actor calculator {
 
   // Divide
   public func div(n : Int) : async ?Int {
-    if(n == 0){  
-      return null; // 'null' encodes the division by zero error.
-    } 
-    else{
+    if (n == 0) {
+      // 'null' encodes the division by zero error.
+      return null;
+    } else {
       cell /= n;
       return ?cell;
     };
   };
 
-  // Clear the calculator
+  // Clear the calculator and reset its cell to zero.
   public func clearall() : async () {
     cell := 0;
   };
